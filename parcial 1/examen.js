@@ -104,7 +104,7 @@ async function menu() {
             if (regresarMenu.toLowerCase() === 'si' || regresarMenu.toLowerCase() === 'no') {
                 break;
             } else {
-                console.log('Opción no válida. Favor de ingresar "Si" o "No".');
+                console.log('Opcion no valida. Favor de ingresar "Si" o "No".');
             }
         }
     
