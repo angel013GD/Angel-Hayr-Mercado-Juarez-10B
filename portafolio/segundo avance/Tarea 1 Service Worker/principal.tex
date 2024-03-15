@@ -1,0 +1,138 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+% Títulos automáticos en Ingles
+\usepackage[english]{babel}
+
+% Soporte para buenas urls e hipervínculos entre secciones
+\usepackage{hyperref}
+
+% Citas y referencias en formato APA
+% Si quiere las citas y referencias en IEEE comente esta línea
+\usepackage{apacite}
+
+% Imágenes y figuras
+\usepackage{graphicx}
+
+% Código fuente con números de línea
+\usepackage{listings}
+% Puede cambiar el lenguaje de código fuente
+% https://www.overleaf.com/learn/latex/code_listing#Supported_languages
+\lstset{
+    language=C,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\def \unidad{Universidad Tecnológica de Tijuana }
+\def \programa{Ingeniería En Desarrollo Y Gestión De Software }
+\def \curso{Aplicaciones Web Progresivas}
+\def \titulo{Introduction to Service Workers}
+
+\def \autores{
+    Mercado Juarez Angel Hayr\\
+    0319124541@ut-tijuana.edu.mx \\
+    0319124541\\
+    
+    \vspace{0.5cm}
+    
+    Teacher \\
+    Dr. Ray Brunett Parra\\
+}
+\def \fecha{29 February 2024}
+\def \lugar{
+    Tijuana B.C, 
+   México
+}
+
+% Inicia el documento 
+\begin{document}
+
+% Inserta la portada del documento
+\input{portada}
+
+\tableofcontents
+
+\chapter{Introduction to Service Workers}\label{Introduction to Service Workers}
+\section{Introduction}\label{intro}
+A Service Worker is a script that runs in the background, independent of the web page that installed it. It acts as a proxy between the web application, the browser, and the network, allowing functionalities such as offline resource loading, push notifications, and background synchronization.
+
+Service Workers are a powerful tool that allows web developers to create more reliable, efficient, and engaging web applications. They can be used in a variety of web applications, including offline web applications, push notifications, background synchronization, and web games .\cite{google23} \cite{mozilla23}
+
+Limitations:
+\begin{itemize}
+    \item They only work on HTTPS.
+    \item They do not have access to the DOM.
+    \item They are not supported by all browsers.
+\end{itemize}
+\section{Benefits of Service Workers}\label{Benefits of Service Workers}
+\begin{itemize}
+    \item Offline Functionality: By caching static resources like HTML, CSS, JavaScript, and images, Service Workers enable your application to work even when the user has no internet connection. This can greatly enhance the user experience, especially for applications that are frequently used offline
+    \item Push Notifications: Service Workers allow you to send real-time notifications to users, even when the web page is not open. This can be used to keep users engaged and informed about important events or updates within your application.
+    \item Background Synchronization: With Service Workers, you can perform data synchronization in the background without the user needing to interact with the application. This can be useful for tasks like updating product catalogs or syncing user data with a server.
+    \item Performance Optimization: By intercepting network requests, Service Workers can optimize the performance of your application by caching resources, serving them from the local cache, and minimizing the amount of data that needs to be transferred over the network.
+\end{itemize}
+
+\section{Implementation}\label{Implementation}
+
+To implement a Service Worker, you need to register a JavaScript file in the browser. This file defines the behavior of the Service Worker, including which events to intercept and how to respond to them.\cite{mozilla23}
+\begin{itemize}
+    \item Registering the Service Worker: You need to register a JavaScript file with the browser using the navigator.serviceWorker.register() method. This file defines the behavior of the Service Worker, including which events to intercept and how to respond to them.
+    \item Installing the Service Worker: Once registered, the Service Worker is downloaded and installed by the browser. This process happens in the background and does not require any user interaction.
+    \item Activating the Service Worker: Once installed, the Service Worker is activated and takes control of all network requests for the pages that are within its scope. The scope is defined in the Service Worker registration file and can include specific URLs or entire directories.
+    \item Handling Network Requests: The Service Worker can intercept and modify network requests made by the pages within its scope. This allows you to implement various caching strategies, perform offline fallback, or modify request headers before they are sent to the server.
+    \item Responding to Push Notifications: Service Workers can also be used to receive push notifications from a server. When a push notification is received, the Service Worker can handle it by displaying a notification to the user or performing other actions.
+\end{itemize}
+
+\section{Lifecycle}\label{Lifecycle}
+
+A Service Worker goes through a well-defined lifecycle that consists of the following stages:\cite{mozilla23}
+
+\begin{itemize}
+    \item Registration: The Service Worker is registered with the browser.
+    \item Installation: The Service Worker is downloaded and installed by the browser.
+    \item Activation: The Service Worker takes control of all network requests for the pages within its scope.
+    \item Waiting: The Service Worker is waiting for a new version to be installed.
+    \item Activation: A new version of the Service Worker has been installed and takes control.
+\end{itemize}
+
+\section{Use Cases}\label{Use Cases}
+Service Workers can be used in a variety of web applications, including:
+
+\begin{itemize}
+    \item Offline web applications: As mentioned earlier, Service Workers are ideal for creating offline-first applications that can provide a reliable user experience even without an internet connection.
+    \item Push notifications: Service Workers can be used to implement real-time push notifications, keeping users engaged and informed about important events or updates within your application.
+    \item Background synchronization: Background synchronization is useful for tasks like updating product catalogs, syncing user data with a server, or performing any other data-related operation in the background without interrupting the user experience.
+    \item Web games: Service Workers can be used to improve the performance and reliability of web games by caching game assets, implementing offline fallback, and optimizing network requests.
+    \item Progressive Web Apps (PWAs): Service Workers are a key component of PWAs, enabling features like offline access, push notifications, and background synchronization. \cite{jakearchibald23}
+
+\end{itemize}
+
+\section{Limitations}\label{Limitations}
+Despite their powerful capabilities, Service Workers do have some limitations:
+
+\begin{itemize}
+    \item HTTPS Requirement: Service Workers can only be registered on websites that use HTTPS. This is a security requirement to ensure that the Service Worker cannot be tampered with.
+    \item No DOM Access: Service Workers do not have direct access to the DOM of the web page that installed them. This is to prevent them from modifying the page's content or behavior without the user's knowledge or consent.
+    \item Browser Support: While Service Workers are supported by most modern browsers, there are still some browsers that do not support them. You should check the browser compatibility before using Service Workers in your application. \cite{w3c23}
+\end{itemize}
+
+\section{Conclusion}\label{Conclusion}
+Service Workers are a powerful tool that can be used to enhance the functionality and performance of web applications. They offer a variety of benefits, including offline support, push notifications, background synchronization, and performance optimization. While there are some limitations to consider, Service Workers are a valuable tool for web developers who want to create more reliable, efficient, and engaging web applications.
+
+
+% Estilo de bibliografía APA
+% Si quiere usar el estilo IEEE comente esta línea
+\bibliographystyle{apacite}
+
+% Descomente esta línea para usar el estilo de bibliografía IEEE
+%\bibliographystyle{ieeetr}
+\bibliography{referencias}
+
+\end{document}

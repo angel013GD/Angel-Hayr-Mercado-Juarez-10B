@@ -1,0 +1,42 @@
+.banner-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.banner-image {
+    max-width: 100%; /* Ajustar el tamaño máximo de la imagen */
+    height: auto; /* Mantener la proporción de aspecto */
+}
+
+.title-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #3498db;
+    font-family: 'Arial', sans-serif;
+}
+
+.menu-container {
+    text-align: center;
+    margin-top: 20px; /* Ajustar el margen superior */
+}
+
+.menu-container button {
+    background-color: #3498db; /* Cambiar el color de fondo */
+    color: white; /* Cambiar el color del texto */
+    padding: 10px 20px; /* Ajustar el relleno */
+    margin: 5px; /* Ajustar el margen entre botones */
+    border: none; /* Eliminar el borde */
+    border-radius: 5px; /* Agregar esquinas redondeadas */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+}
+
+.menu-container button:hover {
+    background-color: #2980b9; /* Cambiar el color de fondo al pasar el ratón */
+}
