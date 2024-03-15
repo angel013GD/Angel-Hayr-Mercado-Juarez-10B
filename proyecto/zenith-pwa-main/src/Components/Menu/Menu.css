@@ -1,0 +1,48 @@
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+
+.option {
+  flex: 1;
+  text-align: center;
+  padding: 1vh;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #e0e0e0;
+}
+
+.user-option {
+  position: relative;
+}
+.sub-option{
+  display: flex;
+  justify-content: center;
+}
+.sub-option:hover {
+  background-color: #e0e0e0;
+}
+
+.user-options {
+  position: absolute;
+  width: 100%;
+  top: -11vh;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+.AiIconsMenu {
+  height: 7vh;
+  width: 10vh;
+  color: #3bcefa;
+}

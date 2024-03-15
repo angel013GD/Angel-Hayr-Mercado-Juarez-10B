@@ -1,0 +1,17 @@
+/* UserQR.css */
+
+.avatar-container {
+    width: 20vw; /* Utiliza el 20% del ancho de la ventana */
+    padding-bottom: 0vw; /* Crea un contenedor cuadrado con un 20% del ancho de la ventana como padding inferior */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    margin: 10px auto; /* Centra el contenedor horizontalmente con un margen superior e inferior de 10px */
+    border: 2px solid black; /* Agrega un borde negro de 2px al contenedor */
+  }
+  
+  .avatar {
+    width: 100%; /* Ajusta el tamaño de la imagen para que llene completamente el contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción de aspecto */
+    object-fit: cover; /* Hace que la imagen se ajuste dentro del contenedor manteniendo la proporción de aspecto */
+  }
+  

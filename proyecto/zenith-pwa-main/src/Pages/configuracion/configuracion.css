@@ -1,0 +1,68 @@
+
+div {
+    box-sizing: border-box;
+  }
+  
+  #title-configuracion {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .div-permisos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 15px;
+
+  }
+  
+  .subdiv-Permisos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #text-permitir-camara {
+    margin-right: 10px; 
+}
+
+  #text-permisos {
+    font-weight: bold;
+    font-size: 15px;
+    color:#90b5e0
+  }
+  
+  #div-swich {
+    margin-left: auto; 
+}
+  
+  /* Estilos para la sección de notificaciones */
+  .subdiv-notificaciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para la sección de ayuda */
+  .ayuda {
+    margin-top: 150px;
+    margin-left: 15px;
+  }
+  
+  /* Estilos para los textos en la sección de ayuda */
+  #text-acerca,
+  #text-Enviar,
+  #text-soporte {
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilos al pasar el ratón sobre los textos en la sección de ayuda */
+  #text-acerca:hover,
+  #text-Enviar:hover,
+  #text-soporte:hover {
+    background-color: #f0f0f0;
+  }
+  
+
