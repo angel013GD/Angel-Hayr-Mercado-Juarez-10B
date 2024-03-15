@@ -1,0 +1,1472 @@
+{
+	"info": {
+		"_postman_id": "34f253a4-968d-4583-b195-a8907631be06",
+		"name": "Zenith",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31221797",
+		"_collection_link": "https://gold-rocket-750237.postman.co/workspace/Zenith~77d0270d-b364-4b53-8111-272ce5b2592e/collection/30783288-34f253a4-968d-4583-b195-a8907631be06?action=share&source=collection_link&creator=31221797"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Registro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\" :\"test2@gmail.com\",\r\n    \"nombre_usuario\" :\"Ken01\",\r\n    \"nombre\" :\"Ken\",\r\n    \"contrasenia\" :\"prueba123\",\r\n    \"empleado_id\" :1\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/auth/sign-up",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre_usuario\" :\"test2@gmail.com\",\r\n    \"contrasenia\" :\"prueba123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarioEmpleado",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/usuario/empleado/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"empleado",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Departamento",
+			"item": [
+				{
+					"name": "AltaDepartamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Recursos Humanos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/departamento",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"departamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaDepartamentoIndividual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/departamento/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"departamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionDepartamento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Departamento_Test2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/departamento/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"departamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaDepartamentosGeneral",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/departamento",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"departamento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Puesto",
+			"item": [
+				{
+					"name": "AltaPuesto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Reclutador\",\r\n    \"departamento_id\" :2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/puesto",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"puesto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionPuesto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Puesto_test2\",\r\n    \"departamento_id\" :2\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/puesto/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"puesto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaPuestoGeneral",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/puesto",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"puesto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaPuestoIndividual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/puesto/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"puesto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Faltas",
+			"item": [
+				{
+					"name": "AltaFalta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_empleado\" :13,\r\n    \"motivo\" :\"Me quede dormido\",\r\n    \"fecha\" :\"2023-02-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/faltas",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"faltas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionPuesto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Puesto_test2\",\r\n    \"departamento_id\" :2\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/puesto/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"puesto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaFaltasGeneral",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/faltas",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"faltas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaFaltasIndividual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/faltas/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"faltas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "faltasEmpleado",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/faltas/empleado/13",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"faltas",
+								"empleado",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "faltasDepartamento",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/faltas/departamento/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"faltas",
+								"departamento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Incidente",
+			"item": [
+				{
+					"name": "AltaIncidente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empleado_id\" :2,\r\n    \"departamento_id\" :1,\r\n    \"fecha_incidente\" :\"2023-02-01\",\r\n    \"trabajo_trayecto\" :\"Trabajo\",\r\n    \"interno_imss\": \"N/A\",\r\n    \"observaciones\":\"Sin observaciones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incidente",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incidente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionIncidente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empleado_id\" :2,\r\n    \"departamento_id\" :1,\r\n    \"fecha_incidente\" :\"2023-08-15\",\r\n    \"trabajo_trayecto\" :\"Trabajo\",\r\n    \"interno_imss\": \"N/A\",\r\n    \"observaciones\":\"Sin observaciones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incidente/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incidente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaIncidenteGeneral",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incidente",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incidente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaIncidenteIndividual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incidente/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incidente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IncidenteDepartamento",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incidente/departamento/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incidente",
+								"departamento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IncidenteEmpleado",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incidente/empleado/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incidente",
+								"empleado",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empleado",
+			"item": [
+				{
+					"name": "AltaEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empleado\" :{\r\n    \"nombre\": \"Nombre del Empleado\",\r\n    \"apellido_paterno\": \"Apellido Paterno del Empleado\",\r\n    \"apellido_materno\": \"Apellido Materno del Empleado\",\r\n    \"fecha_nacimiento\": \"1990-01-01\",\r\n    \"puesto_id\": 1,\r\n    \"telefono\": \"123456789\",\r\n    \"correo\": \"correo@example.com\"\r\n    },\r\n    \"direccion\" :{\r\n        \"calle\":\"Cto almendros\",\r\n        \"colonia\":\"coloniaTest\",\r\n        \"no_interior\":\"13A\",\r\n        \"no_exterior\":\"13396\",\r\n        \"cp\":\"13396\",\r\n        \"estado\":\"Tijuana\",\r\n        \"pais\":\"Mexico\"\r\n    },\r\n    \"datos_seguro\":{\r\n        \"numero_seguro\":\"9451141564\",\r\n        \"fecha_alta_seguro\":\"1990-01-01\"\r\n    },\r\n    \"datos_emergencia\":{\r\n        \"contacto_emergencia\":\"ContactoEmergencia\",\r\n        \"correo_emergencia\":\"emergencia@gmail.com\",\r\n        \"telefono_emergencia\":\"521664789621\",\r\n        \"alergias\":\"Ninguna\",\r\n        \"tipo_sangre\":\"A+\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/empleado",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"empleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaEmpleadoIndividual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/empleado/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"empleado",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionEmpleado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empleado\" :{\r\n    \"nombre\": \"Nombre del Empleado 2\",\r\n    \"apellido_paterno\": \"Apellido Paterno del Empleado\",\r\n    \"apellido_materno\": \"Apellido Materno del Empleado\",\r\n    \"fecha_nacimiento\": \"1990-01-01\",\r\n    \"puesto_id\": 1,\r\n    \"telefono\": \"123456789\",\r\n    \"correo\": \"correo@example.com\"\r\n    },\r\n    \"direccion\" :{\r\n        \"calle\":\"Cto almendros\",\r\n        \"colonia\":\"coloniaTest\",\r\n        \"no_interior\":\"13A\",\r\n        \"no_exterior\":\"13396\",\r\n        \"cp\":\"13396\",\r\n        \"estado\":\"Tijuana\",\r\n        \"pais\":\"Mexico\"\r\n    },\r\n    \"datos_seguro\":{\r\n        \"numero_seguro\":\"9451141564\",\r\n        \"fecha_alta_seguro\":\"1990-01-01\"\r\n    },\r\n    \"datos_emergencia\":{\r\n        \"contacto_emergencia\":\"ContactoEmergencia\",\r\n        \"correo_emergencia\":\"emergencia@gmail.com\",\r\n        \"telefono_emergencia\":\"664789621\",\r\n        \"alergias\":\"Ninguna\",\r\n        \"tipo_sangre\":\"A+\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/empleado/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"empleado",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaEmpleadoGeneral",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/empleado",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"empleado"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TipoDeIncapacidad",
+			"item": [
+				{
+					"name": "AltaTipoDeIncapacidad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Temporal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/tipodeincapacidad",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tipodeincapacidad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaTipoDeIncapacidadIndividual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/tipodeincapacidad/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tipodeincapacidad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaTipoDeIncapacidadGeneral",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/tipodeincapacidad",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tipodeincapacidad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionTipoDeIncapacidad",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/tipodeincapacidad/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tipodeincapacidad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Motivo",
+			"item": [
+				{
+					"name": "AltaMotivo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"Dedo mochado\",\r\n    \"nivel_gravedad\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/motivo",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"motivo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaMotivoIndividual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/empleado/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"empleado",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaMotivoGeneral",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/motivo",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"motivo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionMotivo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" :\"2 Dedos mochado\",\r\n    \"nivel_gravedad\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/motivo/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"motivo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Incapacidad",
+			"item": [
+				{
+					"name": "AltaIncapacidad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empleado\": 1,\r\n    \"motivo\": 1,\r\n    \"tipo_incapacidad\": 1,\r\n    \"dias\": 10,\r\n    \"fecha_inicio\": \"2023-11-23\",\r\n    \"fecha_fin\": \"2023-11-30\",\r\n    \"observaciones\": \"casi se muere\",\r\n    \"estado\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incapacidad",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incapacidad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaIncapacidadIndividual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incapacidad/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incapacidad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaIncapacidadDepartamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incapacidad/departamento/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incapacidad",
+								"departamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaIncapacidadEmpleado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incapacidad/empleado/2",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incapacidad",
+								"empleado",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaIncapacidadGeneral",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incapacidad",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incapacidad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionIncapacidad",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empleado\": 1,\r\n    \"motivo\": 1,\r\n    \"tipo_incapacidad\": 1,\r\n    \"dias\": 10,\r\n    \"fecha_inicio\": \"2023-11-23\",\r\n    \"fecha_fin\": \"2023-11-30\",\r\n    \"observaciones\": \"casi se muere x2\",\r\n    \"estado\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/incapacidad/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"incapacidad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consulta",
+			"item": [
+				{
+					"name": "AltaConsulta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empleado\": 1,\r\n    \"motivo\": 1,\r\n    \"responsable\": 1,\r\n    \"observaciones\": \"tiene tos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaConsultaIndividual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/consulta/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"consulta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaConsultaGeneral",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/consulta",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"consulta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaDeparatamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/consulta/departamento/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"consulta",
+								"departamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaEmpleado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/consulta/empleado/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"consulta",
+								"empleado",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizacionConsulta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empleado\": 1,\r\n    \"motivo\": 1,\r\n    \"responsable\": 1,\r\n    \"observaciones\": \"tiene mucha tos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{RutaAPIV3}}/api/v1/consulta/1",
+							"protocol": "http",
+							"host": [
+								"{{RutaAPIV3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"consulta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/health/auth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"health",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE3MDEyNDYzMjYsImV4cCI6MTcwMTMzMjcyNiwibmJmIjoxNzAxMjQ2MzI2LCJqdGkiOiJsTHVjQ0d2ZHd5dXdvb3ZsIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.8H_uDAYtE_xz-skb2sX0b2Yttr4y3x-5V3Fu2eVSf-I",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "RutaAPIV3",
+			"value": "127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "RutaAPIV3Dev",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
