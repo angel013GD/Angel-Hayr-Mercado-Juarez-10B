@@ -1,0 +1,180 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+% Títulos automáticos en Ingles
+\usepackage[english]{babel}
+
+% Soporte para buenas urls e hipervínculos entre secciones
+\usepackage{hyperref}
+
+% Citas y referencias en formato APA
+% Si quiere las citas y referencias en IEEE comente esta línea
+\usepackage{apacite}
+
+% Imágenes y figuras
+\usepackage{graphicx}
+
+% Código fuente con números de línea
+\usepackage{listings}
+% Puede cambiar el lenguaje de código fuente
+% https://www.overleaf.com/learn/latex/code_listing#Supported_languages
+\lstset{
+    language=C,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\def \unidad{Universidad Tecnológica de Tijuana }
+\def \programa{Ingeniería En Desarrollo Y Gestión De Software }
+\def \curso{Aplicaciones Web Progresivas}
+\def \titulo{Cache management strategies in PWA's}
+
+\def \autores{
+    Mercado Juarez Angel Hayr\\
+    0319124541@ut-tijuana.edu.mx \\
+    0319124541\\
+    
+    \vspace{0.5cm}
+    
+    Teacher \\
+    Dr. Ray Brunett Parra\\
+}
+\def \fecha{15 March 2024}
+\def \lugar{
+    Tijuana B.C, 
+   México
+}
+
+% Inicia el documento 
+\begin{document}
+
+% Inserta la portada del documento
+\input{portada}
+
+\tableofcontents
+
+\chapter{Cache management strategies in PWA's}\label{Cache management strategies in PWA's}
+\section{Introduction}\label{intro}
+Progressive Web Apps (PWAs) are a new generation of web applications that offer an experience similar to that of a native application. To achieve this, PWAs use a variety of techniques, including caching web resources. Caching can improve the performance and reliability of a PWA by reducing the need to download resources from the network. 
+
+\section{Cache Management Strategies}\label{Cache Management Strategies}
+There are several different strategies for managing the cache in a PWA. Some of the most common strategies include:
+\begin{itemize}
+    \item Cache-first: This strategy always tries to serve resources from the cache. If the resource is not in the cache, it is downloaded from the network and added to the cache.
+    \item Network-first: This strategy first tries to serve resources from the network. If the resource is not available on the network, it is attempted to be served from the cache.
+    \item Cache-only: This strategy only serves resources from the cache. If the resource is not in the cache, it is not returned.
+    \item Stale-while-revalidate: This strategy serves the resource from the cache, even if it is outdated. At the same time, an updated version of the resource is downloaded from the network and added to the cache.
+\end{itemize} \cite{google23}
+
+\section{Implementation}\label{Implementation}
+
+To implement a Service Worker, you need to register a JavaScript file in the browser. This file defines the behavior of the Service Worker, including which events to intercept and how to respond to them.\cite{mozilla23}
+\begin{itemize}
+    \item Registering the Service Worker: You need to register a JavaScript file with the browser using the navigator.serviceWorker.register() method. This file defines the behavior of the Service Worker, including which events to intercept and how to respond to them.
+    \item Installing the Service Worker: Once registered, the Service Worker is downloaded and installed by the browser. This process happens in the background and does not require any user interaction.
+    \item Activating the Service Worker: Once installed, the Service Worker is activated and takes control of all network requests for the pages that are within its scope. The scope is defined in the Service Worker registration file and can include specific URLs or entire directories.
+    \item Handling Network Requests: The Service Worker can intercept and modify network requests made by the pages within its scope. This allows you to implement various caching strategies, perform offline fallback, or modify request headers before they are sent to the server.
+    \item Responding to Push Notifications: Service Workers can also be used to receive push notifications from a server. When a push notification is received, the Service Worker can handle it by displaying a notification to the user or performing other actions.
+\end{itemize}
+The best strategy for a particular PWA will depend on the specific needs of the application. \cite{jakearchibald14}
+
+\section{Cache-First Strategy}\label{Cache-First Strategy}
+
+The cache-first strategy is a good choice for PWAs that need to be available offline. This strategy ensures that users can access the PWA even if they do not have a network connection. However, the cache-first strategy can lead to users seeing outdated content.
+
+\section{Network-First Strategy}\label{Network-First Strategy}
+The network-first strategy is a good choice for PWAs that need to show the most up-to-date content. This strategy ensures that users always see the latest version of the PWA. However, the network-first strategy can lead to a poor user experience if the network is slow or unreliable.
+
+\section{Cache-Only Strategy}\label{Cache-Only Strategy}
+The cache-only strategy is a good choice for PWAs that do not need to be updated frequently. This strategy can improve the performance of the PWA by reducing the number of network requests. However, the cache-only strategy can lead to users seeing outdated content.
+
+\section{Stale-While-Revalidate Strategy}\label{Stale-While-Revalidate Strategy}
+The stale-while-revalidate strategy is a good choice for PWAs that need to balance the need for up-to-date content with the need for performance. This strategy ensures that users always see the latest version of the PWA, but it also allows them to access the PWA offline. \cite{cacheapi}
+
+\section{Progressive Web App (PWA) Cache Management Example}\label{Progressive Web App (PWA) Cache Management Example}
+Scenario:
+
+Imagine creating a PWA that acts as a product catalog for an online store. The PWA should display product images, basic information (name, price, description), and allow users to add products to a shopping cart. The PWA should function offline, enabling users to browse the catalog and add products to the cart even without an internet connection.
+
+Cache Strategy:
+
+We will employ the stale-while-revalidate strategy for cache management. This strategy lets users access PWA content offline while updating the content in the background.
+
+Implementation:
+
+1. Service Worker Registration: A Service Worker will be registered in the PWA's index.html file. The Service Worker is responsible for intercepting resource requests and managing the cache.
+HTML
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+
+2. Request Handling: The Service Worker intercepts resource requests and checks if the resource is cached. If found, it's delivered to the user. If not, it's downloaded from the network and added to the cache.
+JavaScript
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cacheResponse) => {
+      return cacheResponse || fetch(event.request).then((networkResponse) => {
+        return caches.open('my-cache').then((cache) => {
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        });
+      });
+    })
+  );
+});
+
+3. Cache Updates: The Service Worker handles background cache updates.
+JavaScript
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'sync-cache') {
+    event.waitUntil(
+      caches.open('my-cache').then((cache) => {
+        return cache.keys().then((cacheKeys) => {
+          return Promise.all(
+            cacheKeys.map((cacheKey) => {
+              return fetch(cacheKey).then((networkResponse) => {
+                return cache.put(cacheKey, networkResponse);
+              });
+            })
+          );
+        });
+      })
+    );
+  }
+});
+
+4. Resources to Cache: It's recommended to cache the following resources:
+- Product Images
+- Basic Product Information (name, price, description)
+- PWA JavaScript Code
+
+5. Cache Expiration: Defining a cache expiration policy is crucial. This allows removing unused resources and freeing up storage space.
+
+Benefits:
+- The PWA functions offline, allowing users to access content even without an internet connection.
+- PWA performance improves as resources are loaded from the local cache.
+- Mobile data consumption reduces because resources aren't downloaded from the network on every PWA access.
+
+Limitations:
+- The PWA might display outdated content if the cache isn't updated frequently.
+- Implementing cache management requires additional development effort.
+
+
+\section{Conclusion}\label{Conclusion}
+Caching is an important part of building a fast and reliable PWA. By choosing the right cache management strategy, developers can improve the user experience and make their PWA more engaging for users.
+
+% Estilo de bibliografía APA
+% Si quiere usar el estilo IEEE comente esta línea
+\bibliographystyle{apacite}
+
+% Descomente esta línea para usar el estilo de bibliografía IEEE
+%\bibliographystyle{ieeetr}
+\bibliography{referencias}
+
+\end{document}

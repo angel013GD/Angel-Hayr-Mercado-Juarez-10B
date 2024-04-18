@@ -1,0 +1,103 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+% Títulos automáticos en Ingles
+\usepackage[english]{babel}
+
+% Soporte para buenas urls e hipervínculos entre secciones
+\usepackage{hyperref}
+
+% Citas y referencias en formato APA
+% Si quiere las citas y referencias en IEEE comente esta línea
+\usepackage{apacite}
+
+% Imágenes y figuras
+\usepackage{graphicx}
+
+% Código fuente con números de línea
+\usepackage{listings}
+% Puede cambiar el lenguaje de código fuente
+% https://www.overleaf.com/learn/latex/code_listing#Supported_languages
+\lstset{
+    language=C,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\def \unidad{Universidad Tecnológica de Tijuana }
+\def \programa{Ingeniería En Desarrollo Y Gestión De Software }
+\def \curso{Aplicaciones Web Progresivas}
+\def \titulo{Cache with Network and Offline Mode in PWA's}
+
+\def \autores{
+    Mercado Juarez Angel Hayr\\
+    0319124541@ut-tijuana.edu.mx \\
+    0319124541\\
+    
+    \vspace{0.5cm}
+    
+    Teacher \\
+    Dr. Ray Brunett Parra\\
+}
+\def \fecha{20 March 2024}
+\def \lugar{
+    Tijuana B.C, 
+   México
+}
+
+% Inicia el documento 
+\begin{document}
+
+% Inserta la portada del documento
+\input{portada}
+
+\tableofcontents
+
+\chapter{Cache with Network and Offline Mode in PWA's}\label{Cache with Network and Offline Mode in PWA's}
+\section{Introduction}\label{intro}
+Progressive Web Apps (PWAs) have revolutionized the web development landscape, offering an enhanced user experience that rivals native mobile applications. A key feature of PWAs is their ability to cache content and function offline, ensuring seamless operation even when internet connectivity is unavailable. This capability is particularly crucial for modern web applications that demand consistent availability and accessibility.
+
+To achieve offline functionality, PWAs utilize service workers, event-driven scripts that run in the background, independent of the web page. Service workers intercept network requests and responses, enabling them to cache resources for later use. This caching strategy ensures that users can continue accessing and interacting with the PWA even when offline.
+
+\section{Cache Strategies and Implementation}\label{Cache Strategies and Implementation}
+PWAs employ various cache strategies to optimize performance and user experience. One common approach is to cache static assets, such as HTML, CSS, and JavaScript files, which remain unchanged across app updates. This strategy reduces the need for repeated network requests, improving loading times and reducing data consumption. \cite{mdn_js13kgames_offline_service_workers}
+
+For dynamic content that updates frequently, PWAs implement cache-first strategies. In this approach, the service worker first checks the cache for the requested resource. If the resource is found, it is served directly from the cache, providing an immediate response to the user. If the resource is not cached or outdated, the service worker fetches the latest version from the network and updates the cache accordingly. \cite{kouassi2021_pwa_cache_offline}
+
+To handle network failures gracefully, PWAs can employ cache-fallback strategies. When a network request fails, the service worker falls back to serving the cached version of the resource, ensuring that the user still has access to some level of functionality. Once network connectivity is restored, the service worker can update the cached resource with the latest version from the server.\cite{stackoverflow_pwa_offline_cache}
+
+\section{Benefits and Applications}\label{Benefits and Applications}
+The ability to cache content and operate offline offers numerous benefits for PWAs:\cite{kouassi2021_pwa_cache_offline}
+\begin{itemize}
+    \item Improved User Experience: PWAs provide a consistent and responsive experience even when offline, reducing user frustration and enhancing overall satisfaction.
+    \item Reduced Data Consumption: By caching frequently accessed content, PWAs minimize data usage, which is particularly beneficial for users on limited data plans or in areas with poor connectivity.
+    \item Increased Availability: PWAs remain functional even during network outages, ensuring that users can continue accessing critical information and services.
+    \item Enhanced Performance: Caching static and dynamic content can significantly improve page load times and overall app performance.
+\end{itemize}
+
+PWAs with offline capabilities are particularly well-suited for applications that require consistent access to information and functionality, such as:
+\begin{itemize}
+    \item News and social media apps: Users can stay updated on news and connect with others even when offline.
+    \item Educational and reference apps: Students and professionals can access learning materials and reference information without an internet connection.
+    \item Financial and productivity apps: Users can manage their finances, track tasks, and access essential tools even when offline.
+\end{itemize}
+
+
+\section{Conclusion}\label{Conclusion}
+Cache with network and offline mode is a fundamental feature of PWAs, enabling them to deliver an enhanced user experience that rivals native mobile applications. By caching content and employing effective caching strategies, PWAs can provide consistent availability, reduced data consumption, and improved performance, even when internet connectivity is unavailable. As PWAs continue to gain traction, the ability to operate offline will become increasingly essential for web applications that demand seamless functionality and user satisfaction.
+
+% Estilo de bibliografía APA
+% Si quiere usar el estilo IEEE comente esta línea
+\bibliographystyle{apacite}
+
+% Descomente esta línea para usar el estilo de bibliografía IEEE
+%\bibliographystyle{ieeetr}
+\bibliography{referencias}
+
+\end{document}
