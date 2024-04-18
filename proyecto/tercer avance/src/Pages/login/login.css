@@ -1,0 +1,164 @@
+.mensageError{
+  background-color: rgb(219, 141, 141);
+}
+
+#login {
+    flex-direction: column;
+    height: 93vh;
+   
+
+  }
+  
+  #login-container {
+    background-color: #ffffff;
+    max-width: 400px;
+    width: 90%;
+    margin: auto; 
+  }
+  
+  #formLogo {
+    text-align: center;
+  }
+  
+  #logoMain {
+    width: 80%; 
+    max-width: 200px; 
+  }
+  
+  #loginForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h3 {
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 10px 0;
+  }
+  
+  a {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #22cafdf1;
+    border-radius: 12px; 
+  }
+
+  span{
+    text-align: right;
+  }
+
+  #contactSupport {
+    color: #989999;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #22cafdf1;
+    color: #fff;
+    border: none;
+    border-radius: 15px; 
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #15b5e6f1;
+  }
+  
+
+@media (max-width: 460px) {
+
+  #login {
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+    
+
+  }
+  #login-container {
+      padding: 10px;
+  }
+
+  #logoMain {
+      width: 100%;
+  }
+
+  input,
+  button {
+      font-size: 14px;
+      width: 90%;
+      padding: 15px;
+      margin-top: 15px;
+      border: 1px solid #22cafdf1;
+      border-radius: 12px; 
+      
+  }
+  
+
+  button{
+    margin-left: 15px;
+  }
+
+  #loginForm {
+      margin-top: 150x; 
+  }
+
+  #contactSupport {
+      margin-top: 5px; 
+
+    }
+
+    span{
+      text-align: right;
+      margin-top: 5px;
+    }
+  
+}
+
+
+@media (min-width: 361px) and (max-width: 411px) {
+  #login-container {
+      max-width: 320px; 
+  }
+}
+
+
+@media (min-width: 360px) and (max-width: 667px) {
+  #login-container {
+      max-width: 320px; 
+  }
+}
+
+@media (min-width: 375px) and (max-width: 812px) {
+  #login-container {
+      max-width: 375px; 
+  }
+}
+
+/* Tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #login-container {
+      max-width: 600px; 
+  }
+}

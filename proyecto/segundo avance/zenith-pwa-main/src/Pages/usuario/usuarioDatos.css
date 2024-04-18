@@ -1,0 +1,93 @@
+
+div {
+    box-sizing: border-box;
+  }
+  
+
+  #title-usuario {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+  .div-informacionP{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+    
+  .informacionT {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  #text-permisos,
+  #text-trabajo {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+ 
+  .subdiv-nombre,
+  .subdiv-numEmergencia,
+  .subdiv-sangre,
+  .subdiv-alergia,
+  .subdiv-correo,
+  .subdiv-area,
+  .subdiv-puesto,
+  .subdiv-supervisor,
+  .subdiv-horario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+
+  .subdiv-nombre span,
+  .subdiv-numEmergencia span,
+  .subdiv-sangre span,
+  .subdiv-alergia span,
+  .subdiv-correo span,
+  .subdiv-area span,
+  .subdiv-puesto span,
+  .subdiv-supervisor span,
+  .subdiv-horario span {
+    flex: 1;
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .subdiv-nombre span:first-child,
+  .subdiv-numEmergencia span:first-child,
+  .subdiv-sangre span:first-child,
+  .subdiv-alergia span:first-child,
+  .subdiv-correo span:first-child,
+  .subdiv-area span:first-child,
+  .subdiv-puesto span:first-child,
+  .subdiv-supervisor span:first-child,
+  .subdiv-horario span:first-child {
+    text-align: left;
+    margin-right: 5px;
+  }
+  
+.subdiv-nombre span:last-child,
+.subdiv-numEmergencia span:last-child,
+.subdiv-sangre span:last-child,
+.subdiv-alergia span:last-child,
+.subdiv-correo span:last-child,
+.subdiv-area span:last-child,
+.subdiv-puesto span:last-child,
+.subdiv-supervisor span:last-child,
+.subdiv-horario span:last-child {
+  color: #a3a3a3; /* Cambia el color según tus preferencias */
+  font-size: 13px; /* Cambia el tamaño de fuente según tus preferencias */
+}
+
+#text-informacion,
+#text-trabajo {
+  color:#90b5e0;
+  margin-bottom: 10px;
+}

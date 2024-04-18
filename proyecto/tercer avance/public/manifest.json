@@ -1,0 +1,41 @@
+{
+  "short_name": "Zenith",
+  "name": "Zenith PWA",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "/1280.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "purpose": "any",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/640.png",
+      "sizes": "640x1136",
+      "type": "image/png",
+      "purpose": "any"
+
+    }
+  ]
+}

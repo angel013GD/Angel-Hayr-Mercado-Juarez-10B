@@ -1,0 +1,85 @@
+/* UserQR.css */
+a {
+  display: contents;
+}
+.textEmployee{
+  text-align: justify;
+  margin: 0% 0% 18% 2%;
+  font-family: sans-serif;
+}
+.avatar-container {
+  width: 20vw; /* Utiliza el 20% del ancho de la ventana */
+  padding-bottom: 0vw; /* Crea un contenedor cuadrado con un 20% del ancho de la ventana como padding inferior */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  margin: 10px auto; /* Centra el contenedor horizontalmente con un margen superior e inferior de 10px */
+  border: 2px solid black; /* Agrega un borde negro de 2px al contenedor */
+}
+
+.avatar {
+  width: 100%; /* Ajusta el tamaño de la imagen para que llene completamente el contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción de aspecto */
+  object-fit: cover; /* Hace que la imagen se ajuste dentro del contenedor manteniendo la proporción de aspecto */
+}
+
+.p1QRUser{
+  color: #c5c2c2;
+  margin-left: 1vh;
+  font-family: sans-serif;
+  font-style: italic;
+  margin-top: -4%;
+}
+
+.inputUserQR {
+
+  height: 48%;
+  margin: 6% 2% 11% 2%;
+  font-size: -0.8rem;
+  border: 1px solid #94e9fc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(228, 227, 227, 0.1);
+  -webkit-tap-highlight-color: rgba(20, 134, 187, 0);
+  padding: 1% 0%;
+  text-align: left 0%;
+  padding: revert-layer;
+  padding-left: 10px; 
+  transition: border-color 0.2s ease; 
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button1 {
+  margin: 0 5px;
+  background-color: #2fd158;
+  color: white;
+  border: none;
+  padding: 2% 2%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blueButton {
+  background-color: #63d2ff;
+  margin-top: 0px;
+}
+.options {
+  display: grid;
+  padding: 3%;
+  justify-items: center;
+}
+.divButtonScan{
+  display: ruby-text;
+
+}
+.buttonScan{
+  border: solid 1px #fff;
+  background-color: #fff;
+  color: rgb(11, 187, 187);
+  font-weight: bold;
+  font-family: sans-serif;
+}
+

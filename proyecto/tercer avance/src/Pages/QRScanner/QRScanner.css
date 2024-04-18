@@ -1,0 +1,81 @@
+font{
+  font-family: sans-serif;
+}
+.qr-scanner {
+    position: relative;
+
+  }
+  
+  .qr-scanner video {
+    margin: 2%;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 10%;
+    
+  }
+  
+  .qr-scanner.active {
+    background-color: #4CAF50;
+    border: solid 1px #4CAF50;
+    color: #fff;
+    display: flex;
+    flex-direction: ce;
+    align-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5% 0% 0% 0%;
+  }
+  .qr-scanner.inactive {
+    background-color: #f44336; /* Rojo */
+    border: solid 1px #fff;
+    color: #fff;
+  }
+  .videoRef {
+    height: 20.1vh;
+    border: solid 1vh #000000;
+    width: 21.1vh;
+    background: black;
+}
+.divQR {
+  display: grid;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+  padding: 4%;
+  justify-items: center;
+}
+.divButtonNoScan{
+  display: ruby-text;
+
+}
+.buttonNoScan{
+  border: solid 1px #fff;
+  background-color: #fff;
+  color: rgb(11, 187, 187);
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.textScanner {
+  text-align: justify;
+  margin: 0% 0% 18% 2%;
+  font-family: sans-serif;
+}
+
+.p1{
+  color: #c5c2c2;
+  margin-left: 1vh;
+  font-family: sans-serif;
+  font-style: italic;
+  margin-top: -4%;
+}
+
+
+.hrQRScanner{ 
+  border: 0;
+  height: 1px;
+  background-color: #bdb6b6;
+  margin: 10px 0;
+}

@@ -1,0 +1,8 @@
+Instalar instancia HTTP para acceder a camara:
+1. npm install -g ngrok
+2. Hacer cuenta de ngrok
+3. Descargar HUB
+4. Ejecute el siguiente comando para agregar su token de autenticación al archivo de configuración predeterminado ngrok.yml: ngrok http 3000
+5. Agregar tu key con el comando de auth del token de ngrok en el HUB
+6. EJEMPLO: cmd de hub: ngrok config add-authtoken 2dRF3tXDPv5Xu96QAh2aviVEn2h_5NGNvUQvmrBRZeErJo8QT
+7. Coloque su aplicación en línea en un dominio efímero. Reenvío a su servicio ascendente. Por ejemplo, si está escuchando en el puerto http://localhost:8080, run:

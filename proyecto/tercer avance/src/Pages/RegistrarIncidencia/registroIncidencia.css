@@ -1,0 +1,100 @@
+.container-main {
+        flex-direction: column;
+        align-items: flex-start; 
+        padding: 2rem;
+    }
+      
+
+.divText {
+        text-align: left;
+        margin-bottom: 2rem;
+        margin-bottom: 80px;
+
+}
+
+
+  .title-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+  
+  .div-generarInci {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-bottom: 30px;
+
+  }
+  
+  .input-field {
+    flex-basis: 30%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+
+
+  
+  .App-link {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    margin: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .select-field {
+    appearance: none;
+    background-color: white;
+    font-size: 1rem;
+    font-family: inherit; /* Utiliza la fuente del elemento padre */
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #22cafdf1;
+    border-radius: 12px;
+}
+
+.select-field:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+
+/* Style the options */
+.select-field option {
+  padding: 10px; /* Espaciado interno de las opciones */
+}
+
+/* Style the select arrow */
+.select-field::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajustar posición del arrow */
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 1.5vw; /* Ajustar tamaño de la flecha */
+  height: 1.5vw; /* Ajustar tamaño de la flecha */
+}
+
+
+/* Style the select arrow on focus */
+.select-field:focus::after {
+  color: #007bff;
+  width: 5vh;
+  height:5vh;
+}
+.opcionSelect{
+  height: 20px;
+  width: 20px;
+}

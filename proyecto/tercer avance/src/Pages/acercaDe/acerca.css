@@ -1,0 +1,68 @@
+/* Estilos generales */
+.acercaDe {
+    padding: 20px;
+  }
+  
+  .h2Acerca {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .textAcerca {
+    margin-left: 20px;
+    font-family: sans-serif;
+  }
+  
+  .pAcerca {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  
+  .hrQRScanner {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .avatar {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  .avatar2 {
+    display: block;
+    margin: 0 auto;
+    width: 30vh; /* Tamaño deseado para la imagen */
+    height: 30vh; /* Tamaño deseado para la imagen */
+    object-fit: cover; /* Ajustar la imagen dentro del círculo */
+    border-radius: 50%; /* Hacer que la imagen sea circular */
+    overflow: hidden; /* Ocultar partes de la imagen que se salgan del círculo */
+  }
+  /* Estilos para el scroll */
+  .acercaDe {
+    height: 85vh; /* Altura deseada del contenedor */
+    overflow-y: auto; /* Mostrar scroll vertical */
+    scrollbar-width: thin; /* Ancho del scrollbar */
+    scrollbar-color: #ccc transparent; /* Color del scrollbar */
+  }
+  
+  .acercaDe::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+  }
+  
+  .acercaDe::-webkit-scrollbar-track {
+    background: transparent; /* Color del track */
+  }
+  
+  .acercaDe::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color del thumb */
+    border-radius: 4px; /* Borde redondeado */
+  }
+  
+  .acercaDe::-webkit-scrollbar-thumb:hover {
+    background-color: #999; /* Color hover */
+  }
+  

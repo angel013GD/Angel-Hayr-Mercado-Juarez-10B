@@ -1,0 +1,48 @@
+.h2Titles{
+  text-align: center;
+  margin: 0% 0% 2% 0%;
+  font-family: sans-serif;
+}
+/* Añade esta regla al final de tu archivo CSS */
+.menu-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh; /* Altura fija para el menú */
+  overflow: scroll; /* Para permitir desplazamiento si el contenido es más grande */
+  border: 1px solid #ccc;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem; /* Añade un relleno para separar los íconos del borde */
+  background-color: white; /* Fondo blanco para el menú */
+}
+
+/* Resto de tu CSS... */
+
+
+.option {
+ /* flex-grow: 1;*/
+
+  padding: 1vh;
+
+}
+
+.user-option {
+  position: relative;
+}
+.sub-option{
+  display: flex;
+  justify-content: center;
+}
+
+.AiIconsMenu {
+  height: 7vh;
+  width: 10vh;
+  color: #3bcefa;
+}
